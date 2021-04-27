@@ -25,6 +25,7 @@ public class Controller {
 
     @GetMapping(value = "/findById/{id}")
     public Dept findById(@PathVariable("id")int id){
+        //显示某个信息
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/findById/"+id,Dept.class);
     }
 }
