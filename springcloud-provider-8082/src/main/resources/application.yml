@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: springcloud-provider-8082
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:XE
+    username: scott
+    password: tiger
+mybatis:
+  type-aliases-package: com.neu.entity
+  mapper-locations: classpath:/mapper/*Mapper.xml
+#Eureka的配置，服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/   #注册中心的地址
