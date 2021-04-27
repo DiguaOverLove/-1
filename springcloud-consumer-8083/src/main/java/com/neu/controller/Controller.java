@@ -19,6 +19,7 @@ public class Controller {
 
     @GetMapping(value = "/findAll")
     public List<Dept> findAll(){
+        //显示全部信息
         return restTemplate.getForObject(REST_URL_PREFIX+"/dept/findAll",List.class);
     }
 
